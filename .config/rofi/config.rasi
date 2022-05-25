@@ -1,0 +1,77 @@
+configuration {
+  display-drun: "Applications:";
+  drun-display-format: "{name}";
+  font: "JetBrains Mono Regular 12";
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+window {
+  width: 30%;
+}
+
+* {
+  background: #181818;
+  foreground: #E8E8E8;
+
+  background-shade: #817F7F;
+  foreground-shade: #888888;
+
+  background-color: @background;
+
+  border:  0;
+  margin:  0;
+  padding: 0;
+  spacing: 0;
+}
+
+element {
+  padding: 10 0 10 0;
+  spacing: 10;
+  text-color: @foreground-shade;
+}
+
+element selected {
+  text-color: @foreground;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @background-shade;
+  padding: 12;
+  text-color: @foreground;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 8 12;
+  background-color: @background;
+  columns: 1;
+  lines: 4;
+}
+
+mainbox {
+  background-color: @background;
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @background-shade;
+  padding: 12 0 0 12;
+  text-color: @foreground;
+}
